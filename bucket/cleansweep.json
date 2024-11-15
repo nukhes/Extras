@@ -1,0 +1,28 @@
+{
+    "version": "3.0b2",
+    "description": "The easiest and quickest Windows junk file remover on the planet.",
+    "homepage": "https://github.com/thomasloupe/CleanSweep",
+    "url": "https://github.com/thomasloupe/CleanSweep/releases/download/v3.0b2/CleanSweep.zip",
+    "hash": "97e1540910718c5176d5e78b92bf7533f7d58bf5d7b79ac2e3549e3fad91dcaf",
+    "extract_dir": "cleansweep",
+    "shortcuts": [
+        [
+            "CleanSweep.exe",
+            "CleanSweep"
+        ]
+    ],
+    "persist": [
+        "CleanSweep.exe.config"
+    ],
+    "checkver": {
+        "url": "https://github.com/thomasloupe/CleanSweep/releases",
+        "regex": "/tag/v([\\d.\\w]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/thomasloupe/CleanSweep/releases/download/v$version/CleanSweep.zip",
+        "version": {
+            "regex": "/tag/v([\\d.\\w]+)",
+            "replace": "$1"
+        }
+    }
+}
